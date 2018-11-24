@@ -27,8 +27,11 @@
 	</p>
 	
 	<p>
+	Hello Expression Languages
 	${ user.name }
 	${user.active ? "is an active user" : "is an inactive user"}
 	</p>
+	
+	<p><c:out value="Hello JSTL !" /></p>
 </body>
 </html>
