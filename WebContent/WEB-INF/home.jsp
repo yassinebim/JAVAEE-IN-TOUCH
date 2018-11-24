@@ -25,5 +25,10 @@
 	<p>
 	${ !empty name ? "Hello "+ name : "Hello world" }
 	</p>
+	
+	<p>
+	${ user.name }
+	${user.active ? "is an active user" : "is an inactive user"}
+	</p>
 </body>
 </html>

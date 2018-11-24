@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.me.beans.EbUser;
+
 /**
  * Servlet implementation class HomeServlet
  */
@@ -28,9 +30,14 @@ public class HomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("/text/html");
 		response.setCharacterEncoding("UTF-8" );
+		
+		EbUser user = new EbUser();
+		user.setActive(true);
+		user.setName("Yassine");
 		String nameParam = request.getParameter("name");
 		//the name must be in the url to be displaye on jsp page
 		request.setAttribute("name", nameParam);
+		request.setAttribute("user", user);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
 
 	}
