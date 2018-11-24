@@ -8,18 +8,22 @@
 </head>
 <body>
 
-<%@ include file="menu.jsp" %>
+	<%@ include file="menu.jsp" %>
 	this is Home Page
 
 	<p>
 		<%
 			String name = (String) request.getAttribute("name");
 			if (name != null) {
-				out.println("Hello "+ name);
+				out.println("Hello " + name);
 			} else {
 				out.println("Hello world");
 			}
 		%>
+	</p>
+	
+	<p>
+	${ !empty name ? "Hello "+ name : "Hello world" }
 	</p>
 </body>
 </html>
