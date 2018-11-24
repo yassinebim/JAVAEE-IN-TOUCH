@@ -13,11 +13,11 @@
 
 	<p>
 		<%
-			String heure = (String) request.getAttribute("heure");
-			if (heure.equals("jour")) {
-				out.println("Bonjour");
+			String name = (String) request.getAttribute("name");
+			if (name != null) {
+				out.println("Hello "+ name);
 			} else {
-				out.println("Bonsoir");
+				out.println("Hello world");
 			}
 		%>
 	</p>

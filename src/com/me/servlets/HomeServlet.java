@@ -26,11 +26,11 @@ public class HomeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("/text/html");
 		response.setCharacterEncoding("UTF-8" );
-		request.setAttribute("name", "yassine");
+		String nameParam = request.getParameter("name");
+		//the name must be in the url to be displaye on jsp page
+		request.setAttribute("name", nameParam);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
 
 	}
