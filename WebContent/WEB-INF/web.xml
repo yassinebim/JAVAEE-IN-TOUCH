@@ -2,15 +2,21 @@
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <servlet>
-    <servlet-name>MyServlet</servlet-name>
-    <servlet-class>com.me.servlets.MyServlet</servlet-class>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>com.me.servlets.HomeServlet</servlet-class>
   </servlet>
- <!--  <servlet-mapping>
-    <servlet-name>Test</servlet-name>
-    <url-pattern>/bonjour</url-pattern>
-  </servlet-mapping> -->
   <servlet-mapping>
-  	<servlet-name>MyServlet</servlet-name>
+  	<servlet-name>HomeServlet</servlet-name>
   	<url-pattern>/home</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ContactServlet</servlet-name>
+    <servlet-class>com.me.servlets.ContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ContactServlet</servlet-name>
+  	<url-pattern>/contact</url-pattern>
+  </servlet-mapping>
+ 
 </web-app>
