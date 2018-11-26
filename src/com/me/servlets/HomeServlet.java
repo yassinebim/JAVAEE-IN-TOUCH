@@ -35,7 +35,9 @@ public class HomeServlet extends HttpServlet {
 		user.setActive(true);
 		user.setName("Yassine");
 		String nameParam = request.getParameter("name");
+		String [] titles = {"first Title","Seconde one","third one","fourth one"};
 		//the name must be in the url to be displaye on jsp page
+		request.setAttribute("titles", titles);
 		request.setAttribute("name", nameParam);
 		request.setAttribute("user", user);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
